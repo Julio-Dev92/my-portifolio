@@ -1,16 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Archivo, JetBrains_Mono } from "next/font/google";
 import { PrefsScript } from "@/lib/i18n";
 import "./globals.css";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-const instrument = Instrument_Serif({
-  variable: "--font-instrument",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-});
+const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"] });
+const jetbrains = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Julio Saldanha — Desenvolvedor Full-Stack",
@@ -27,8 +21,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f6f4ef" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f1012" },
+    { media: "(prefers-color-scheme: light)", color: "#f3f3f3" },
+    { media: "(prefers-color-scheme: dark)", color: "#1e1e1e" },
   ],
 };
 
@@ -38,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       data-lang="pt"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${instrument.variable} antialiased`}
+      className={`${archivo.variable} ${jetbrains.variable} antialiased`}
     >
       <head>
         <PrefsScript />

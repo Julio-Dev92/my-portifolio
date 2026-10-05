@@ -1,6 +1,6 @@
 "use client";
 
-import { Languages, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 
 function save(key: string, value: string) {
   try {
@@ -9,7 +9,7 @@ function save(key: string, value: string) {
 }
 
 const btn =
-  "inline-flex h-9 items-center gap-1.5 rounded-full border border-line bg-surface px-3 font-mono text-xs text-muted transition-colors hover:border-accent hover:text-text";
+  "inline-flex h-9 items-center gap-1.5 px-2 text-sm text-muted hover:text-text";
 
 export function LangToggle() {
   function toggle() {
@@ -21,7 +21,6 @@ export function LangToggle() {
   }
   return (
     <button type="button" onClick={toggle} className={btn} aria-label="Mudar idioma / Switch language">
-      <Languages size={14} aria-hidden />
       <span data-l="pt">EN</span>
       <span data-l="en">PT</span>
     </button>
@@ -39,8 +38,8 @@ export function ThemeToggle() {
   }
   return (
     <button type="button" onClick={toggle} className={btn} aria-label="Alternar tema / Toggle theme">
-      <Sun size={14} aria-hidden className="hidden [html[data-theme=dark]_&]:block" />
-      <Moon size={14} aria-hidden className="[html[data-theme=dark]_&]:hidden" />
+      <Sun size={16} aria-hidden className="hidden [html[data-theme=dark]_&]:block" />
+      <Moon size={16} aria-hidden className="[html[data-theme=dark]_&]:hidden" />
     </button>
   );
 }

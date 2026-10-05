@@ -10,8 +10,8 @@ export const profile = {
     en: "Open to remote roles and relocation to Europe",
   } satisfies L10n,
   headline: {
-    pt: "Construo produtos web de ponta a ponta — da modelagem do banco à interface que o cliente usa.",
-    en: "I build web products end to end — from the database schema to the interface customers use.",
+    pt: "Construo produtos web de ponta a ponta, da modelagem do banco à interface que o cliente usa.",
+    en: "I build web products end to end, from the database schema to the interface customers use.",
   } satisfies L10n,
   summary: [
     {
@@ -31,6 +31,8 @@ export const profile = {
     github: "https://github.com/Julio-Dev92",
   },
   resume: "/julio-saldanha-resume-en.pdf",
+  /** Portrait in /public (4:5). The hero falls back to a single column while unset. */
+  photo: null as string | null,
 };
 
 export const stack: { group: L10n; items: string[] }[] = [

@@ -11,11 +11,8 @@ export const categories: { id: Category | "all"; label: L10n }[] = [
   { id: "cms", label: { pt: "Sites & CMS", en: "Sites & CMS" } },
 ];
 
-export type MockupId = "headless" | "catalog" | "cashback" | "management" | "legacy" | "cms";
-
 export type Project = {
   id: string;
-  mockup: MockupId;
   categories: Category[];
   title: L10n;
   client: L10n;
@@ -29,7 +26,6 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "headless-health",
-    mockup: "headless",
     categories: ["fullstack"],
     title: { pt: "Plataforma de saúde headless", en: "Headless healthcare platform" },
     client: { pt: "Empresa de soluções médicas", en: "Medical solutions company" },
@@ -56,17 +52,16 @@ export const projects: Project[] = [
   },
   {
     id: "ai-catalog",
-    mockup: "catalog",
     categories: ["ai", "fullstack"],
     title: { pt: "Catálogo industrial com IA", en: "AI-powered industrial catalog" },
     client: { pt: "Fabricante de equipamentos industriais", en: "Industrial equipment manufacturer" },
     tagline: {
-      pt: "Do cadastro do produto ao catálogo em PDF pronto para gráfica — com tabelas técnicas extraídas por IA.",
-      en: "From product entry to a print-ready PDF catalog — with spec tables extracted by AI.",
+      pt: "Do cadastro do produto ao catálogo em PDF pronto para gráfica, com tabelas técnicas extraídas por IA.",
+      en: "From product entry to a print-ready PDF catalog, with spec tables extracted by AI.",
     },
     problem: {
       pt: "O catálogo impresso era montado à mão, e as tabelas técnicas de cada produto eram digitadas a partir de imagens de fichas, um processo lento e sujeito a erro.",
-      en: "The printed catalog was assembled by hand, and every product's spec table was typed in from datasheet images — slow and error-prone.",
+      en: "The printed catalog was assembled by hand, and every product's spec table was typed in from datasheet images. Slow and error-prone.",
     },
     solution: {
       pt: "Integração com o Google Gemini que lê a imagem complementar do produto e gera a tabela técnica estruturada. Um gerador de PDF (mPDF) monta o catálogo completo, por categoria ou por modelo, com capa, contracapa e QR code.",
@@ -83,7 +78,6 @@ export const projects: Project[] = [
   },
   {
     id: "cashback-club",
-    mockup: "cashback",
     categories: ["mobile", "fullstack"],
     title: { pt: "Clube de compras com cashback", en: "Cashback shopping club" },
     client: { pt: "Rede de benefícios e marketplace", en: "Benefits network and marketplace" },
@@ -109,7 +103,6 @@ export const projects: Project[] = [
   },
   {
     id: "agency-management",
-    mockup: "management",
     categories: ["fullstack"],
     title: { pt: "Sistema de gestão da agência", en: "Agency management system" },
     client: { pt: "Uso interno", en: "Internal tool" },
@@ -122,8 +115,8 @@ export const projects: Project[] = [
       en: "Hours and maintenance contracts were hard to audit, and the dashboard didn't answer the questions finance and account managers asked.",
     },
     solution: {
-      pt: "Evolução do sistema em Laravel 10 + React/TypeScript: novo dashboard, logs de projetos e tarefas, histórico, filtros por múltiplos status e campos de contrato de manutenção — iterando diretamente com as áreas usuárias.",
-      en: "Evolved the Laravel 10 + React/TypeScript system: a new dashboard, project and task logs, history, multi-status filters and maintenance-contract fields — iterating directly with the business users.",
+      pt: "Evolução do sistema em Laravel 10 + React/TypeScript: novo dashboard, logs de projetos e tarefas, histórico, filtros por múltiplos status e campos de contrato de manutenção, iterando diretamente com as áreas usuárias.",
+      en: "Evolved the Laravel 10 + React/TypeScript system: a new dashboard, project and task logs, history, multi-status filters and maintenance-contract fields, iterating directly with the business users.",
     },
     highlights: [
       { pt: "Logs e histórico de tarefas e projetos", en: "Task and project logs and history" },
@@ -135,7 +128,6 @@ export const projects: Project[] = [
   },
   {
     id: "legacy-upgrades",
-    mockup: "legacy",
     categories: ["legacy"],
     title: { pt: "Modernização de sistemas legados", en: "Legacy system modernization" },
     client: { pt: "Associação industrial e plataforma institucional", en: "Industry association and corporate platform" },
@@ -161,7 +153,6 @@ export const projects: Project[] = [
   },
   {
     id: "modular-cms",
-    mockup: "cms",
     categories: ["cms", "fullstack"],
     title: { pt: "CMS modular multi-cliente", en: "Multi-client modular CMS" },
     client: { pt: "Mais de 10 sites de clientes", en: "10+ client websites" },
@@ -170,8 +161,8 @@ export const projects: Project[] = [
       en: "One Laravel codebase with ~100 modules that becomes a corporate site, catalog or store for each client.",
     },
     problem: {
-      pt: "A agência atende clientes muito diferentes — indústria, clínicas, padaria, contabilidade, self-storage — e precisa entregar e manter todos com um time enxuto.",
-      en: "The agency serves very different clients — manufacturing, clinics, a bakery, accounting, self-storage — and has to ship and maintain them all with a lean team.",
+      pt: "A agência atende clientes muito diferentes (indústria, clínicas, padaria, contabilidade, self-storage) e precisa entregar e manter todos com um time enxuto.",
+      en: "The agency serves very different clients (manufacturing, clinics, a bakery, accounting, self-storage) and has to ship and maintain them all with a lean team.",
     },
     solution: {
       pt: "Um admin único em Laravel 9 + Livewire onde cada funcionalidade é um módulo ativável (catálogo, orçamentos, newsletter, galeria, carrossel, modal, onde encontrar…). Atuo no front-end dos sites, criação e ajuste de módulos e correções de envio de e-mail.",
